@@ -1,0 +1,16 @@
+{
+  "name": "optimism-token-tracker",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ steegecs/optimism-token-tracker",
+    "create-local": "graph create --node http://localhost:8020/ steegecs/optimism-token-tracker",
+    "remove-local": "graph remove --node http://localhost:8020/ steegecs/optimism-token-tracker",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 steegecs/optimism-token-tracker"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.29.0",
+    "@graphprotocol/graph-ts": "0.26.0"
+  }
+}
