@@ -1,20 +1,13 @@
 {
-  "configurations": {
-    "deployment": {
-      "locations": ["steegecs", "messari"]
-    }
-  },
   "tokens": {
     "optimism": {
       "mainnet": {
         "template": "optimism.template.yaml",
-        "steegecs": "steegecs/optimism-mainnet",
-        "deploy-on-merge": "false"
+        "steegecs": "steegecs/optimism-mainnet"
       },
       "optimism": {
         "template": "optimism.template.yaml",
-        "steegecs": "steegecs/optimism-optimism",
-        "deploy-on-merge": "false"
+        "steegecs": "steegecs/optimism-optimism"
       }
     }
   }
