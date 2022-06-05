@@ -12,3 +12,10 @@ This repository is used to store code for indexing a subgraph for an optimism to
 - Finally, there is a set of deployment scripts and configurations liad out in the deployments folder to make continuous updates and deployment of one or many tokens easy and efficient.
 - Please let me know if you have any questions!
 - The current deployment that is indexing the OP token on Optimism is located on the Hosted Service at: https://thegraph.com/hosted-service/subgraph/steegecs/optimism-optimism?selected=playgroundThis repository is used to store code for indexing a subgraph for an optimism token tracker
+
+# Folder Structure
+- Abis - contains all abis for deployment
+- deployment - contains deployment scripts to make deplouyment easier and more efficient
+- src - Contains all source code for general token tracing
+- tokens - Contains token specific code and templates
+- results.txt - contains console logs generated from deployment scrips 
