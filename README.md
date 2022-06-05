@@ -27,6 +27,6 @@ This repository is used to store code for indexing a subgraph for an optimism to
 ## Next Steps
 - Integrate price oracle so the data related to volume, balances, and prices can be tracked
 - Add functionality for indexing data related to governance
-- 
+
 ## Team
 Chris Steege (discord: steegecs#2390)
