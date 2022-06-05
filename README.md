@@ -18,4 +18,15 @@ This repository is used to store code for indexing a subgraph for an optimism to
 - deployment - contains deployment scripts to make deplouyment easier and more efficient
 - src - Contains all source code for general token tracing
 - tokens - Contains token specific code and templates
-- results.txt - contains console logs generated from deployment scrips 
+- results.txt - contains console logs generated from deployment script
+
+## How to deploy 
+- See Deployments/README
+`npm run deploy optimism optimism steegecs`
+
+## Team
+Dylan Melotik (discord: dmelotik#1530)
+
+Chris Steege (discord: steegecs#2390)
+
+Slippery Fish (discord: slipperyfish#9458)
