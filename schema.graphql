@@ -37,12 +37,6 @@ type Token @entity {
   " Address of the Token "
   id: ID!
 
-  " Network the token belongs to "
-  network: Network!
-
-  " Type of the token "
-  type: TokenType!
-
   " Name of Token "
   name: String!
 
@@ -51,6 +45,21 @@ type Token @entity {
 
   " Decimals "
   decimals: Int!
+
+  " Version of the subgraph schema, in SemVer format (e.g. 1.0.0) "
+  schemaVersion: String!
+
+  " Version of the subgraph implementation, in SemVer format (e.g. 1.0.0) "
+  subgraphVersion: String!
+
+  " Version of the methodology used to compute metrics, loosely based on SemVer format (e.g. 1.0.0) "
+  methodologyVersion: String!
+
+  " Network the token belongs to "
+  network: Network!
+
+  " Type of the token "
+  type: TokenType!
 
   " Total amount of tokens minted "
   cumulativeAmountMinted: BigDecimal!

@@ -1,7 +1,8 @@
 {
     "network": "mainnet",
+    "deployment": "OPTIMISM_MAINNET",
     "token": {
       "address": "0x4200000000000000000000000000000000000042",
       "startBlock": 14664866
     }
-  }
+}

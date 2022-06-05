@@ -1,7 +1,8 @@
 import { Address, ethereum } from "@graphprotocol/graph-ts";
 import { tokenContract } from "../../generated/tokenContract/tokenContract";
-import { Account, AccountDailySnapshot, Token, TokenDailySnapshot, TokenHourlySnapshot, Transfer } from "../../generated/schema";
-import { BIGDECIMAL_ZERO, BIGINT_ZERO, DEFAULT_DECIMALS, Network, OPTIMISM_TOKEN, SECONDS_PER_DAY, SECONDS_PER_HOUR, TokenType } from "./constants";
+import { Account, AccountDailySnapshot, Token, TokenDailySnapshot, TokenHourlySnapshot } from "../../generated/schema";
+import { BIGDECIMAL_ZERO, BIGINT_ZERO, DEFAULT_DECIMALS, SECONDS_PER_DAY, SECONDS_PER_HOUR } from "./constants";
+import { NetworkConfigs } from "../../configurations/configure";
 
 export function getOrCreateToken(address: string): Token {
     let token = Token.load(address);
@@ -13,8 +14,11 @@ export function getOrCreateToken(address: string): Token {
         let name = erc20Contract.try_name();
         let symbol = erc20Contract.try_symbol();
         // TODO: add overrides for name and symbol
-        token.network = Network.OPTIMISM;
-        token.type = TokenType.ERC20
+        token.subgraphVersion = NetworkConfigs.getSubgraphVersion();
+        token.methodologyVersion = NetworkConfigs.getMethodologyVersion();
+        token.schemaVersion = NetworkConfigs.getSchemaVersion();
+        token.network = NetworkConfigs.getNetwork();
+        token.type = NetworkConfigs.getType();
         token.name = name.reverted ? "" : name.value;
         token.symbol = symbol.reverted ? "" : symbol.value;
         token.decimals = decimals.reverted ? DEFAULT_DECIMALS : decimals.value;
@@ -34,8 +38,8 @@ export function getOrCreateAccount(address: string): Account {
     let account = Account.load(address);
     if (!account) {
         account = new Account(address);
-        account.network = Network.OPTIMISM;
-        account.token = getOrCreateToken(OPTIMISM_TOKEN).id;
+        account.network = NetworkConfigs.getNetwork();
+        account.token = getOrCreateToken(NetworkConfigs.getTokenAddress()).id;
         account.balance = BIGDECIMAL_ZERO
         account.balanceUSD = BIGDECIMAL_ZERO
         account.cumulativeVolume = BIGDECIMAL_ZERO

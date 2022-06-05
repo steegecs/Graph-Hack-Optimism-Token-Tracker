@@ -1,7 +1,8 @@
 {
-    "network": "optimism",
-    "token": {
-      "address": "0x4200000000000000000000000000000000000042",
-      "startBlock": 6490467
-    }
+  "network": "optimism",
+  "deployment": "OPTIMISM_OPTIMISM",
+  "token": {
+    "address": "0x4200000000000000000000000000000000000042",
+    "startBlock": 6490467
   }
+}

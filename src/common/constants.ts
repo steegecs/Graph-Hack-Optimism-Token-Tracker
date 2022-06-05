@@ -1,5 +1,11 @@
 import { log, BigDecimal, BigInt } from "@graphprotocol/graph-ts";
 
+////////////////////
+///// Versions /////
+////////////////////
+
+export const TOKEN_SCHEMA_VERSION = "1.0.0";
+
 ////////////////////////
 ///// Schema Enums /////
 ////////////////////////
@@ -73,10 +79,6 @@ export const SECONDS_PER_HOUR = 60 * 60;
 export const MS_PER_DAY = new BigDecimal(BigInt.fromI32(24 * 60 * 60 * 1000));
 export const MS_PER_YEAR = DAYS_PER_YEAR.times(new BigDecimal(BigInt.fromI32(24 * 60 * 60 * 1000)));
 
-export const OPTIMISM_TOKEN = "0x4200000000000000000000000000000000000042";
 export const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000";
 
-export const WETH_OP_POOL = "0x68F5C0A2DE713a54991E01858Fd27a3832401849";
-export const WETH_USDC_POOL = "0x85149247691df622eaF1a8Bd0CaFd40BC45154a9";
-export const WETH_DAI_POOL = "0x68F5C0A2DE713a54991E01858Fd27a3832401849"
 

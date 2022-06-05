@@ -3,17 +3,18 @@ import {
   Transfer as TransferEvent,
 } from "../../generated/tokenContract/tokenContract"
 import { Transfer } from "../../generated/schema"
-import { BIGDECIMAL_ZERO, BIGINT_ONE, OPTIMISM_TOKEN, TransferType, ZERO_ADDRESS } from "../common/constants"
+import { BIGDECIMAL_ZERO, BIGINT_ONE, TransferType, ZERO_ADDRESS } from "../common/constants"
 import { getOrCreateAccount, getOrCreateToken } from "../common/getters"
 import { getUsdPricePerToken } from "../prices"
 import { updateAccountMetrics, updateTokenMetrics } from "../common/updateMetrics"
 import { convertTokenToDecimal } from "../common/utils"
+import { NetworkConfigs } from "../../configurations/configure"
 
 export function handleTransfer(event: TransferEvent): void {
   let from = event.params.from.toHexString()
   let to = event.params.to.toHexString()
 
-  let token = getOrCreateToken(OPTIMISM_TOKEN)
+  let token = getOrCreateToken(NetworkConfigs.getTokenAddress())
   let receiver = getOrCreateAccount(to)
   let sender = getOrCreateAccount(from)
 
