@@ -21,12 +21,12 @@ This repository is used to store code for indexing a subgraph for an optimism to
 - results.txt - contains console logs generated from deployment script
 
 ## How to deploy 
-- See Deployments/README
+- See Deployments/README and update deploymnt/deploymentConfiguration for adding new deployments
 `npm run deploy optimism optimism steegecs`
 
+## Next Steps
+- Integrate price oracle so the data related to volume, balances, and prices can be tracked
+- Add functionality for indexing data related to governance
+- 
 ## Team
-Dylan Melotik (discord: dmelotik#1530)
-
 Chris Steege (discord: steegecs#2390)
-
-Slippery Fish (discord: slipperyfish#9458)
