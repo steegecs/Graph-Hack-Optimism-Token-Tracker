@@ -1,13 +1,16 @@
 {
-  "name": "optimism-token-tracker",
+  "name": "token-tracker",
   "license": "UNLICENSED",
+  "type": "module",
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ steegecs/optimism-token-tracker",
-    "create-local": "graph create --node http://localhost:8020/ steegecs/optimism-token-tracker",
-    "remove-local": "graph remove --node http://localhost:8020/ steegecs/optimism-token-tracker",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 steegecs/optimism-token-tracker"
+
+    "prepare:yaml": "mustache tokens/${npm_config_token}/config/networks/${npm_config_network}/${npm_config_network}.json tokens/${npm_config_token}/config/templates/${npm_config_template} > subgraph.yaml",
+    "prepare:build": "graph codegen && graph build",
+    "deploy:subgraph": "graph deploy --product hosted-service ${npm_config_location}",
+
+    "deploy": "node  --experimental-json-modules --no-warnings deployment/tokens/deployment.js"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.29.0",

@@ -1,0 +1,127 @@
+{
+  tokens {
+    id
+    network
+    type
+    name
+    symbol
+    decimals
+    cumulativeAmountMinted
+    cumulativeAmountBurned
+    cumulativeAmountBurnedUSD
+    cumulativeVolume
+    cumulativeVolumeUSD
+    circulatingAmount
+    marketCapitalization
+    lastPriceUSD
+    lastPriceTimestamp
+    lastPriceBlockNumber
+  }
+}
+
+{
+  tokenDailySnapshots {
+    id
+    network
+    type
+    name
+    symbol
+    decimals
+    dailyAmountMinted
+    cumulativeAmountMinted
+    dailyAmountBurned
+    cumulativeAmountBurned
+    dailyAmountBurnedUSD
+    cumulativeAmountBurnedUSD
+    dailyVolume
+    cumulativeVolume
+    dailyVolumeUSD
+    cumulativeVolumeUSD
+    circulatingAmount
+    marketCapitalization
+    lastPriceUSD
+    lastPriceTimestamp
+    lastPriceBlockNumber
+  }
+}
+
+{
+  tokenHourlySnapshots {
+    id
+    network
+    type
+    name
+    symbol
+    decimals
+    hourlyAmountMinted
+    cumulativeAmountMinted
+    hourlyAmountBurned
+    cumulativeAmountBurned
+    hourlyAmountBurnedUSD
+    cumulativeAmountBurnedUSD
+    hourlyVolume
+    cumulativeVolume
+    hourlyVolumeUSD
+    cumulativeVolumeUSD
+    circulatingAmount
+    marketCapitalization
+    lastPriceUSD
+    lastPriceTimestamp
+    lastPriceBlockNumber
+  }
+}
+
+{
+  accounts {
+    id
+    network
+    token {
+      id
+    }
+    balance
+    balanceUSD
+    dailyVolume
+    cumulativeVolume
+    cumulativeVolumeUSD
+    cumulativeTransfersInCount
+    cumulativeTransfersOutCount
+    timestamp
+    blockNumber
+  }
+}
+
+{
+  accountDailySnapshots {
+    id
+    network
+    token {
+      id
+    }
+    balance
+    balanceUSD
+    dailyVolume
+    cumulativeVolume
+    dailyVolumeUSD
+    cumulativeVolumeUSD
+    dailyTransfersInCount
+    cumulativeTransfersInCount
+    dailyTransfersOutCount
+    cumulativeTransfersOutCount
+    timestamp
+    blockNumber
+  }
+}
+
+{
+  transfers {
+    id
+    type
+    hash
+    from
+    to
+    amount
+    amountUSD
+    timestamp
+    blockNumber
+  }
+}

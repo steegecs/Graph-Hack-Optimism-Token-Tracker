@@ -1,35 +1,74 @@
-specVersion: 0.0.1
+specVersion: 0.0.2
 schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum
-    name: OptimismERC20
+    name: tokenContract
     network: optimism
     source:
+      abi: tokenContract
       address: "0x4200000000000000000000000000000000000042"
-      abi: OptimismERC20
+      startBlock: 6490467
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
       language: wasm/assemblyscript
+      file: ./src/mappings/token.ts
       entities:
-        - Approval
-        - DelegateChanged
-        - DelegateVotesChanged
-        - OwnershipTransferred
+        - Account
+        - AccountDailySnapshot
+        - Token
+        - TokenDailySnapshot
+        - TokenHourlySnapshot
         - Transfer
       abis:
-        - name: OptimismERC20
-          file: ./abis/OptimismERC20.json
+        - name: tokenContract
+          file: ./abis/optimism/tokenContract.json
+
+        ###########################################
+        ############## Price Oracle ###############
+        ###########################################
+        # ERC20
+        - name: _ERC20
+          file: ./abis/Prices/ERC20.json
+        # Curve Contracts
+        - name: CurveRegistry
+          file: ./abis/Prices/Curve/Registry.json
+        - name: CurvePoolRegistry
+          file: ./abis/Prices/Curve/PoolRegistry.json
+        - name: CalculationsCurve
+          file: ./abis/Prices/Calculations/Curve.json
+        # YearnLens Contracts
+        - name: YearnLensContract
+          file: ./abis/Prices/YearnLens.json
+        # ChainLink Contracts
+        - name: ChainLinkContract
+          file: ./abis/Prices/ChainLink.json
+        # Uniswap Contracts
+        - name: UniswapRouter
+          file: ./abis/Prices/Uniswap/Router.json
+        - name: UniswapFactory
+          file: ./abis/Prices/Uniswap/Factory.json
+        - name: UniswapPair
+          file: ./abis/Prices/Uniswap/Pair.json
+        # SushiSwap Contracts
+        - name: SushiSwapRouter
+          file: ./abis/Prices/SushiSwap/Router.json
+        - name: SushiSwapFactory
+          file: ./abis/Prices/SushiSwap/Factory.json
+        - name: SushiSwapPair
+          file: ./abis/Prices/SushiSwap/Pair.json
+        - name: CalculationsSushiSwap
+          file: ./abis/Prices/Calculations/SushiSwap.json
       eventHandlers:
-        - event: Approval(indexed address,indexed address,uint256)
-          handler: handleApproval
-        - event: DelegateChanged(indexed address,indexed address,indexed address)
-          handler: handleDelegateChanged
-        - event: DelegateVotesChanged(indexed address,uint256,uint256)
-          handler: handleDelegateVotesChanged
-        - event: OwnershipTransferred(indexed address,indexed address)
-          handler: handleOwnershipTransferred
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
-      file: ./src/mapping.ts
+        # - event: Approval(indexed address,indexed address,uint256)
+          # handler: handleApproval
+        # - event: DelegateChanged(indexed address,indexed address,indexed address)
+          # handler: handleDelegateChanged
+        # - event: DelegateVotesChanged(indexed address,uint256,uint256)
+          # handler: handleDelegateVotesChanged
+        # - event: OwnershipTransferred(indexed address,indexed address)
+          # handler: handleOwnershipTransferred
+

@@ -1,0 +1,308 @@
+stdout: stderr: stdout: stderr: stdout: 
+> prepare:yaml
+> mustache tokens/${npm_config_token}/config/networks/${npm_config_network}/${npm_config_network}.json tokens/${npm_config_token}/config/templates/${npm_config_template} > subgraph.yaml
+
+stderr: stdout: 
+Types generated successfully
+
+
+Build completed: /Users/chris/optimism-token-tracker/build/subgraph.yaml
+
+stderr: - Apply migrations
+  Skip migration: Bump mapping apiVersion from 0.0.1 to 0.0.2
+- Apply migrations
+  Skip migration: Bump mapping apiVersion from 0.0.2 to 0.0.3
+- Apply migrations
+  Skip migration: Bump mapping apiVersion from 0.0.3 to 0.0.4
+- Apply migrations
+  Skip migration: Bump mapping apiVersion from 0.0.4 to 0.0.5
+- Apply migrations
+  Skip migration: Bump mapping specVersion from 0.0.1 to 0.0.2
+- Apply migrations
+✔ Apply migrations
+- Load subgraph from subgraph.yaml
+✔ Load subgraph from subgraph.yaml
+- Load contract ABIs
+  Load contract ABI from abis/optimism/tokenContract.json
+- Load contract ABIs
+  Load contract ABI from abis/Prices/ERC20.json
+- Load contract ABIs
+  Load contract ABI from abis/Prices/Curve/Registry.json
+- Load contract ABIs
+  Load contract ABI from abis/Prices/Curve/PoolRegistry.json
+- Load contract ABIs
+  Load contract ABI from abis/Prices/Calculations/Curve.json
+- Load contract ABIs
+  Load contract ABI from abis/Prices/YearnLens.json
+- Load contract ABIs
+  Load contract ABI from abis/Prices/ChainLink.json
+- Load contract ABIs
+  Load contract ABI from abis/Prices/Uniswap/Router.json
+- Load contract ABIs
+  Load contract ABI from abis/Prices/Uniswap/Factory.json
+- Load contract ABIs
+  Load contract ABI from abis/Prices/Uniswap/Pair.json
+- Load contract ABIs
+  Load contract ABI from abis/Prices/SushiSwap/Router.json
+- Load contract ABIs
+  Load contract ABI from abis/Prices/SushiSwap/Factory.json
+- Load contract ABIs
+  Load contract ABI from abis/Prices/SushiSwap/Pair.json
+- Load contract ABIs
+  Load contract ABI from abis/Prices/Calculations/SushiSwap.json
+- Load contract ABIs
+✔ Load contract ABIs
+- Generate types for contract ABIs
+  Generate types for contract ABI: tokenContract (abis/optimism/tokenContract.json)
+- Generate types for contract ABIs
+  Write types to generated/tokenContract/tokenContract.ts
+- Generate types for contract ABIs
+  Generate types for contract ABI: _ERC20 (abis/Prices/ERC20.json)
+- Generate types for contract ABIs
+  Write types to generated/tokenContract/_ERC20.ts
+- Generate types for contract ABIs
+  Generate types for contract ABI: CurveRegistry (abis/Prices/Curve/Registry.json)
+- Generate types for contract ABIs
+  Write types to generated/tokenContract/CurveRegistry.ts
+- Generate types for contract ABIs
+  Generate types for contract ABI: CurvePoolRegistry (abis/Prices/Curve/PoolRegistry.json)
+- Generate types for contract ABIs
+  Write types to generated/tokenContract/CurvePoolRegistry.ts
+- Generate types for contract ABIs
+  Generate types for contract ABI: CalculationsCurve (abis/Prices/Calculations/Curve.json)
+- Generate types for contract ABIs
+  Write types to generated/tokenContract/CalculationsCurve.ts
+- Generate types for contract ABIs
+  Generate types for contract ABI: YearnLensContract (abis/Prices/YearnLens.json)
+- Generate types for contract ABIs
+  Write types to generated/tokenContract/YearnLensContract.ts
+- Generate types for contract ABIs
+  Generate types for contract ABI: ChainLinkContract (abis/Prices/ChainLink.json)
+- Generate types for contract ABIs
+  Write types to generated/tokenContract/ChainLinkContract.ts
+- Generate types for contract ABIs
+  Generate types for contract ABI: UniswapRouter (abis/Prices/Uniswap/Router.json)
+- Generate types for contract ABIs
+  Write types to generated/tokenContract/UniswapRouter.ts
+- Generate types for contract ABIs
+  Generate types for contract ABI: UniswapFactory (abis/Prices/Uniswap/Factory.json)
+- Generate types for contract ABIs
+  Write types to generated/tokenContract/UniswapFactory.ts
+- Generate types for contract ABIs
+  Generate types for contract ABI: UniswapPair (abis/Prices/Uniswap/Pair.json)
+- Generate types for contract ABIs
+  Write types to generated/tokenContract/UniswapPair.ts
+- Generate types for contract ABIs
+  Generate types for contract ABI: SushiSwapRouter (abis/Prices/SushiSwap/Router.json)
+- Generate types for contract ABIs
+  Write types to generated/tokenContract/SushiSwapRouter.ts
+- Generate types for contract ABIs
+  Generate types for contract ABI: SushiSwapFactory (abis/Prices/SushiSwap/Factory.json)
+- Generate types for contract ABIs
+  Write types to generated/tokenContract/SushiSwapFactory.ts
+- Generate types for contract ABIs
+  Generate types for contract ABI: SushiSwapPair (abis/Prices/SushiSwap/Pair.json)
+- Generate types for contract ABIs
+  Write types to generated/tokenContract/SushiSwapPair.ts
+- Generate types for contract ABIs
+  Generate types for contract ABI: CalculationsSushiSwap (abis/Prices/Calculations/SushiSwap.json)
+- Generate types for contract ABIs
+  Write types to generated/tokenContract/CalculationsSushiSwap.ts
+- Generate types for contract ABIs
+✔ Generate types for contract ABIs
+- Generate types for data source templates
+✔ Generate types for data source templates
+- Load data source template ABIs
+✔ Load data source template ABIs
+- Generate types for data source template ABIs
+✔ Generate types for data source template ABIs
+- Load GraphQL schema from schema.graphql
+✔ Load GraphQL schema from schema.graphql
+- Generate types for GraphQL schema
+  Write types to generated/schema.ts
+- Generate types for GraphQL schema
+✔ Generate types for GraphQL schema
+- Apply migrations
+  Skip migration: Bump mapping apiVersion from 0.0.1 to 0.0.2
+- Apply migrations
+  Skip migration: Bump mapping apiVersion from 0.0.2 to 0.0.3
+- Apply migrations
+  Skip migration: Bump mapping apiVersion from 0.0.3 to 0.0.4
+- Apply migrations
+  Skip migration: Bump mapping apiVersion from 0.0.4 to 0.0.5
+- Apply migrations
+  Skip migration: Bump mapping specVersion from 0.0.1 to 0.0.2
+- Apply migrations
+✔ Apply migrations
+- Load subgraph from subgraph.yaml
+✔ Load subgraph from subgraph.yaml
+- Compile subgraph
+  Compile data source: tokenContract => build/tokenContract/tokenContract.wasm
+- Compile subgraph
+✔ Compile subgraph
+- Write compiled subgraph to build/
+  Copy schema file build/schema.graphql
+- Write compiled subgraph to build/
+  Write subgraph file build/tokenContract/abis/optimism/tokenContract.json
+- Write compiled subgraph to build/
+  Write subgraph file build/tokenContract/abis/Prices/ERC20.json
+- Write compiled subgraph to build/
+  Write subgraph file build/tokenContract/abis/Prices/Curve/Registry.json
+- Write compiled subgraph to build/
+  Write subgraph file build/tokenContract/abis/Prices/Curve/PoolRegistry.json
+- Write compiled subgraph to build/
+  Write subgraph file build/tokenContract/abis/Prices/Calculations/Curve.json
+- Write compiled subgraph to build/
+  Write subgraph file build/tokenContract/abis/Prices/YearnLens.json
+- Write compiled subgraph to build/
+  Write subgraph file build/tokenContract/abis/Prices/ChainLink.json
+- Write compiled subgraph to build/
+  Write subgraph file build/tokenContract/abis/Prices/Uniswap/Router.json
+- Write compiled subgraph to build/
+  Write subgraph file build/tokenContract/abis/Prices/Uniswap/Factory.json
+- Write compiled subgraph to build/
+  Write subgraph file build/tokenContract/abis/Prices/Uniswap/Pair.json
+- Write compiled subgraph to build/
+  Write subgraph file build/tokenContract/abis/Prices/SushiSwap/Router.json
+- Write compiled subgraph to build/
+  Write subgraph file build/tokenContract/abis/Prices/SushiSwap/Factory.json
+- Write compiled subgraph to build/
+  Write subgraph file build/tokenContract/abis/Prices/SushiSwap/Pair.json
+- Write compiled subgraph to build/
+  Write subgraph file build/tokenContract/abis/Prices/Calculations/SushiSwap.json
+- Write compiled subgraph to build/
+  Write subgraph manifest build/subgraph.yaml
+- Write compiled subgraph to build/
+✔ Write compiled subgraph to build/
+stdout: 
+> deploy:subgraph
+> graph deploy --product hosted-service ${npm_config_location}
+
+
+Build completed: QmeCuv2hqNGfVJ58NULDqAFWawVDR7jDrPto5ZDBwKkHyA
+
+Deployed to https://thegraph.com/explorer/subgraph/steegecs/optimism-optimism
+
+Subgraph endpoints:
+Queries (HTTP):     https://api.thegraph.com/subgraphs/name/steegecs/optimism-optimism
+Subscriptions (WS): wss://api.thegraph.com/subgraphs/name/steegecs/optimism-optimism
+
+stderr: - Apply migrations
+  Skip migration: Bump mapping apiVersion from 0.0.1 to 0.0.2
+- Apply migrations
+  Skip migration: Bump mapping apiVersion from 0.0.2 to 0.0.3
+- Apply migrations
+  Skip migration: Bump mapping apiVersion from 0.0.3 to 0.0.4
+- Apply migrations
+  Skip migration: Bump mapping apiVersion from 0.0.4 to 0.0.5
+- Apply migrations
+  Skip migration: Bump mapping specVersion from 0.0.1 to 0.0.2
+- Apply migrations
+✔ Apply migrations
+- Load subgraph from subgraph.yaml
+✔ Load subgraph from subgraph.yaml
+- Compile subgraph
+  Compile data source: tokenContract => build/tokenContract/tokenContract.wasm
+- Compile subgraph
+✔ Compile subgraph
+- Write compiled subgraph to build/
+  Copy schema file build/schema.graphql
+- Write compiled subgraph to build/
+  Write subgraph file build/tokenContract/abis/optimism/tokenContract.json
+- Write compiled subgraph to build/
+  Write subgraph file build/tokenContract/abis/Prices/ERC20.json
+- Write compiled subgraph to build/
+  Write subgraph file build/tokenContract/abis/Prices/Curve/Registry.json
+- Write compiled subgraph to build/
+  Write subgraph file build/tokenContract/abis/Prices/Curve/PoolRegistry.json
+- Write compiled subgraph to build/
+  Write subgraph file build/tokenContract/abis/Prices/Calculations/Curve.json
+- Write compiled subgraph to build/
+  Write subgraph file build/tokenContract/abis/Prices/YearnLens.json
+- Write compiled subgraph to build/
+  Write subgraph file build/tokenContract/abis/Prices/ChainLink.json
+- Write compiled subgraph to build/
+  Write subgraph file build/tokenContract/abis/Prices/Uniswap/Router.json
+- Write compiled subgraph to build/
+  Write subgraph file build/tokenContract/abis/Prices/Uniswap/Factory.json
+- Write compiled subgraph to build/
+  Write subgraph file build/tokenContract/abis/Prices/Uniswap/Pair.json
+- Write compiled subgraph to build/
+  Write subgraph file build/tokenContract/abis/Prices/SushiSwap/Router.json
+- Write compiled subgraph to build/
+  Write subgraph file build/tokenContract/abis/Prices/SushiSwap/Factory.json
+- Write compiled subgraph to build/
+  Write subgraph file build/tokenContract/abis/Prices/SushiSwap/Pair.json
+- Write compiled subgraph to build/
+  Write subgraph file build/tokenContract/abis/Prices/Calculations/SushiSwap.json
+- Write compiled subgraph to build/
+  Write subgraph manifest build/subgraph.yaml
+- Write compiled subgraph to build/
+✔ Write compiled subgraph to build/
+- Upload subgraph to IPFS
+  Add file to IPFS build/schema.graphql
+- Upload subgraph to IPFS
+                .. QmaBtExpUt4piYbWoQ8g92ovd4AbYGFNjJyzkC93vyLCj7
+- Upload subgraph to IPFS
+  Add file to IPFS build/tokenContract/abis/optimism/tokenContract.json
+- Upload subgraph to IPFS
+                .. QmPkxXcFphH9JLUvdpYYB2qfvvTkVneN4SRiWq43oMLj8S
+- Upload subgraph to IPFS
+  Add file to IPFS build/tokenContract/abis/Prices/ERC20.json
+- Upload subgraph to IPFS
+                .. QmcU3ydmhYACc77Zo28TUPqUG6FLPUshF9pQewMaPUP4B7
+- Upload subgraph to IPFS
+  Add file to IPFS build/tokenContract/abis/Prices/Curve/Registry.json
+- Upload subgraph to IPFS
+                .. QmTz4kSWY3m98b8DMPHy2HRE5ubmwm6Jv7irwdBjf1y5oA
+- Upload subgraph to IPFS
+  Add file to IPFS build/tokenContract/abis/Prices/Curve/PoolRegistry.json
+- Upload subgraph to IPFS
+                .. QmQwH4YzTci5qZvp8gKpFo9rbYV63ceg9kBUoNkCf3UNhR
+- Upload subgraph to IPFS
+  Add file to IPFS build/tokenContract/abis/Prices/Calculations/Curve.json
+- Upload subgraph to IPFS
+                .. QmNgN5gW4B1K3rA5sqbHKUh6tdTruG5h7RXaiKTn6StL2t
+- Upload subgraph to IPFS
+  Add file to IPFS build/tokenContract/abis/Prices/YearnLens.json
+- Upload subgraph to IPFS
+                .. QmNwJ2ZhnjLAJHVquoz12kUtgLCnuq4dWkUqBRR2Y9vQM4
+- Upload subgraph to IPFS
+  Add file to IPFS build/tokenContract/abis/Prices/ChainLink.json
+- Upload subgraph to IPFS
+                .. QmartT4DPfja3wNaie5CV4Pw16GyxQxTjXbocymxqhqW6c
+- Upload subgraph to IPFS
+  Add file to IPFS build/tokenContract/abis/Prices/Uniswap/Router.json
+- Upload subgraph to IPFS
+                .. QmbuLeCA4gwWtLasXKDqF9oE2P6f1h4SMuhFGNWRdGhFze
+- Upload subgraph to IPFS
+  Add file to IPFS build/tokenContract/abis/Prices/Uniswap/Factory.json
+- Upload subgraph to IPFS
+                .. QmZ55G1yYFzde8Vcq4cpLfNgPSEibpLi9aYCqS1jEvCKQ9
+- Upload subgraph to IPFS
+  Add file to IPFS build/tokenContract/abis/Prices/Uniswap/Pair.json
+- Upload subgraph to IPFS
+                .. QmbPLMADBP8L6LBVP3ZBQ8RgG7ghamD8DvbdUxHAjZrLgm
+- Upload subgraph to IPFS
+  Add file to IPFS build/tokenContract/abis/Prices/SushiSwap/Router.json
+- Upload subgraph to IPFS
+                .. QmbuLeCA4gwWtLasXKDqF9oE2P6f1h4SMuhFGNWRdGhFze (already uploaded)
+- Upload subgraph to IPFS
+  Add file to IPFS build/tokenContract/abis/Prices/SushiSwap/Factory.json
+- Upload subgraph to IPFS
+                .. QmTuHPfzf8mbRksxjJpUMdszZ9YLZySQQVAs5jJnwcqbCH
+- Upload subgraph to IPFS
+  Add file to IPFS build/tokenContract/abis/Prices/SushiSwap/Pair.json
+- Upload subgraph to IPFS
+                .. QmVduuKWkyu5XccFMDFxXkrNU6ZqFQp6RMDHsb9pXDeXoR
+- Upload subgraph to IPFS
+  Add file to IPFS build/tokenContract/abis/Prices/Calculations/SushiSwap.json
+- Upload subgraph to IPFS
+                .. QmZZZFdd6n1onC5Go3pEBXpHx5hQXEJVKpGLdN9b3yUfY1
+- Upload subgraph to IPFS
+  Add file to IPFS build/tokenContract/tokenContract.wasm
+- Upload subgraph to IPFS
+                .. Qmaz1MeDLa93b7TPTDcyrqFCDN3YLukCnMNMKy6dPumSvq
+- Upload subgraph to IPFS
+✔ Upload subgraph to IPFS
+- Deploying to Graph node https://api.thegraph.com/deploy/
